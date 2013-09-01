@@ -1,0 +1,24 @@
+<!doctype html>
+<html ng-app>
+  <head>
+
+    <script src="http://code.angularjs.org/1.0.6/angular.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+
+<form ng-controller="clip" ng-submit="toAdd()">
+<table>
+  <tr ng-repeat="addedClip in addedClips">
+    <td>{{addedClip}}</td>
+    <td><a href="" ng-click="toRemove()">D</a></td>
+  </tr>
+</table>
+  <br />
+  <br />
+  input: 
+  <input id='input' type='text' ng-model="inputValue" ng-click="inputValue=' '" ng-mouseleave="inputValue='Put your notes here!'" />
+
+</form>
+  </body>
+</html>
